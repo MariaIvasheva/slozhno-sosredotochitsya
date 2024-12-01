@@ -9,4 +9,205 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background-color: #fff1f7;
+  --background-image: url("../images/cover-image-light.png");
+  --border-color: #353430;
+  --border-bottom-color: #353430;
+  --font-color: #353430;
+  --accent-color: #ff8dcb;
+}
+
+.page.theme_light .decorative-text__decorative-element {
+  display: none;
+}
+
+.page.theme_light .page {
+  background-color: var(--background-color);
+}
+
+.page.theme_light .header {
+  background-image: var(--background-image);
+}
+
+.page.theme_light .decorated-zone::before {
+  border-color: var(--border-color);
+}
+
+.page.theme_light .decorated-zone::after {
+  border-color: var(--border-color);
+}
+
+.page.theme_light .header__theme-menu-button {
+  --background-color: transparent;
+
+  color: var(--font-color);
+  background-color: var(--background-color);
+}
+
+.page.theme_light .header__theme-menu-button:hover {
+  --border-color: #32312d66;
+
+  border: 1px solid var(--border-color);
+}
+
+.page.theme_light .header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--border-color);
+}
+
+.page.theme_light .title {
+  --font-color: #ffc2e6;
+
+  color: var(--font-color);
+  text-shadow: 4px 4px var(--accent-color);
+}
+
+.page.theme_light .title-decor {
+  --background-color: #ff8dcb;
+  --font-color: #353430;
+
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+.page.theme_light .section__heading {
+  --font-color: #353430;
+  color: var(--font-color);
+}
+
+.page.theme_light .list__text {
+  --font-color: #353430;
+
+  color: var(--font-color);
+}
+
+.page.theme_light .link-line:hover {
+  --border-bottom-color: #353430;
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+
+.page.theme_light .link-line:focus {
+  --border-color: #353430;
+
+  border: 1px solid var(--border-color);
+  /*outline: 1px solid rgba(241, 178, 206, 1);*/
+}
+
+.page.theme_light .link__decor {
+  text-shadow: 1.7px 1.7px var(--accent-color);
+  border-bottom: none;
+}
+
+.page.theme_light .other-coordinates__other-shade {
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.page.theme_light .footer.decorated-zone {
+  border-color: var(--border-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #fff1f7;
+    --background-image: url("../images/cover-image-light.png");
+    --border-color: #353430;
+    --border-bottom-color: #353430;
+    --font-color: #353430;
+    --accent-color: #ff8dcb;
+  }
+
+  .decorative-text__decorative-element {
+    display: none;
+  }
+
+  .page {
+    background-color: var(--background-color);
+  }
+
+  .header {
+    background-image: var(--background-image);
+  }
+
+  .decorated-zone::before {
+    border-color: var(--border-color);
+  }
+
+  .decorated-zone::after {
+    border-color: var(--border-color);
+  }
+
+  .header__theme-menu-button {
+    --background-color: transparent;
+
+    color: var(--font-color);
+    background-color: var(--background-color);
+  }
+
+  .header__theme-menu-button:hover {
+    --border-color: #32312d66;
+
+    border: 1px solid var(--border-color);
+  }
+
+  .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--border-bottom-color);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--border-color);
+  }
+
+  .title {
+    --font-color: #ffc2e6;
+
+    color: var(--font-color);
+    text-shadow: 4px 4px var(--accent-color);
+  }
+
+  .title-decor {
+    --background-color: #ff8dcb;
+    --font-color: #353430;
+
+    background-color: var(--background-color);
+    color: var(--font-color);
+  }
+
+  .section__heading {
+    --font-color: #353430;
+    color: var(--font-color);
+  }
+
+  .list__text {
+    --font-color: #353430;
+
+    color: var(--font-color);
+  }
+
+  .link-line:hover {
+    --border-bottom-color: #353430;
+    border-bottom: 1px solid var(--border-bottom-color);
+  }
+
+  .link-line:focus {
+    --border-color: #353430;
+
+    border: 1px solid var(--border-color);
+    /*outline: 1px solid rgba(241, 178, 206, 1);*/
+  }
+
+  .link__decor {
+    text-shadow: 1.7px 1.7px var(--accent-color);
+    border-bottom: none;
+  }
+
+  .other-coordinates__other-shade {
+    text-shadow: 2px 2px var(--accent-color);
+  }
+
+  .footer.decorated-zone {
+    border-color: var(--border-color);
+  }
 }
