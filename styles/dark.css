@@ -125,3 +125,13 @@
 .page.theme_dark .decorative-text__decorative-element {
   display: block;
 }
+
+/* @media (min-width: 1024px) {
+  .page.theme_dark {
+    .header {
+      --background-image: url("../images/cover-image.png");
+
+      background-image: var(--background-image);
+    }
+  }
+} */
