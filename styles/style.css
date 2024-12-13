@@ -5,6 +5,10 @@
   background-color: var(--background-color);
   background-size: cover;
   font-family: "IBM Plex Mono", sans-serif;
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   font-size: var(--font-size);
   line-height: var(--line-height);
   font-weight: var(--font-weight);
@@ -16,10 +20,6 @@
   grid-template-rows: 1fr min-content 1fr;
   max-inline-size: 100%;
   block-size: max(100vh, 668px);
-  background-image: var(--background-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   padding: var(--padding);
 }
 
@@ -66,7 +66,9 @@
 }
 
 .header__theme-menu-item {
-  margin-bottom: 10px;
+  --margin-block-end: 10px;
+
+  margin-block-end: var(--margin-block-end);
 }
 
 .header__theme-menu-button {
@@ -246,6 +248,10 @@
   border-bottom: 1px solid #f1b2ce;
 }
 
+.remove__link-line {
+  border-bottom: none;
+}
+
 .link-line:hover {
   --border-bottom-color: #f1b2ce;
 
@@ -256,6 +262,13 @@
   --border-color: #f1b2ce;
 
   border: 1px solid var(--border-color);
+}
+
+.link-line:focus-visible {
+  --border-color: #f1b2ce;
+
+  border: 1px solid var(--border-color);
+  outline: none;
 }
 
 .shadow__decor {
@@ -310,6 +323,7 @@
   block-size: max(100vh, 668px);
   padding: var(--padding);
   text-align: center;
+  justify-content: center;
 }
 
 .other-shade {
@@ -325,7 +339,6 @@
 
     block-size: max(100vh, 1024px);
     justify-self: center;
-    padding: var(--padding);
   }
 
   .decorated-zone::before {
@@ -346,7 +359,7 @@
   }
 
   .header__theme-menu-item {
-    margin-bottom: 9px;
+    --margin-block-end: 9px;
   }
 
   .header__rec {
@@ -371,7 +384,6 @@
   .more__background-size {
     justify-self: end;
     inline-size: max(50%, 364px);
-    block-size: min-content;
   }
 
   .main {
@@ -420,23 +432,18 @@
 
   .link-line {
     border-bottom: none;
-    text-decoration: none;
   }
 
   .section__images {
     --gap: 20px;
 
-    display: grid;
     gap: var(--gap);
   }
 
   .images__container {
     --gap: 20px;
 
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    object-fit: cover;
-    object-position: center;
     gap: var(--gap);
   }
 
@@ -471,17 +478,12 @@
     --padding: 20px;
 
     display: grid;
-    align-items: center;
     position: relative;
     block-size: max(100vh, 1024px);
-    padding: var(--padding);
   }
 
   .other-shade {
     --margin-inline-start: 0;
-
-    text-shadow: 2px 2px var(--accent-color);
-    margin-inline-start: var(--margin-inline-start);
   }
 }
 
@@ -505,30 +507,20 @@
 
   .title {
     --line-height: 129.53px;
-
-    line-height: var(--line-height);
   }
 
   .more__background-size {
-    block-size: min-content;
-    justify-self: end;
     align-self: center;
     /* inline-size: max(50%, 491px); */
   }
 
   .subtitle-question {
-    display: inline;
-    padding-right: 50px;
-  }
-
-  .section {
-    display: grid;
+    display: block;
   }
 
   .section__about {
     --gap: 10px;
 
-    grid-template-columns: 1fr 2fr;
     column-gap: var(--gap);
   }
 
@@ -542,7 +534,6 @@
     --gap: 20px;
 
     display: grid;
-    grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
     column-gap: var(--gap);
   }
@@ -551,7 +542,6 @@
     --gap: 20px;
 
     display: inline-grid;
-    grid-template-columns: repeat(2, auto);
     gap: var(--gap);
   }
 
@@ -572,25 +562,7 @@
     --margin-block-start: 10px;
     --margin-block-end: 20px;
 
-    color: var(--font-color);
-    margin-block-start: var(--margin-block-start);
     margin-block-end: var(--margin-block-end);
-  }
-
-  .link-line {
-    text-decoration: none;
-  }
-
-  .link-line:hover {
-    --border-bottom-color: #f1b2ce;
-
-    border-bottom: 1px solid var(--border-bottom-color);
-  }
-
-  .link-line:focus {
-    --border-color: #f1b2ce;
-
-    border: 1px solid var(--border-color);
   }
 
   .link-line:has(.link__decor) {
@@ -600,15 +572,7 @@
   .footer {
     --padding: 20px;
 
-    display: grid;
     position: relative;
-    align-content: center;
     block-size: max(100vh, 768px);
-    padding: var(--padding);
-    /* text-align: center; */
-  }
-
-  .other-shade {
-    text-shadow: 2px 2px var(--accent-color);
   }
 }
